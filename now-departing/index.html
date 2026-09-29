@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-page="app">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Now Departing · Jon Bobrow</title>
+<meta name="description" content="Live NYC Subway departure times for the train you’re trying to catch, right on your wrist. One glance, and you know whether to walk or run.">
+<meta property="og:title" content="Now Departing: Know when your train is coming. That’s it.">
+<meta property="og:description" content="Live NYC Subway departure times for the train you’re trying to catch, right on your wrist. One glance, and you know whether to walk or run.">
+<meta property="og:url" content="https://app.jonbobrow.com/now-departing/">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/now-departing/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/head.js"></script>
+<script src="../assets/js/site.js" defer></script>
+</head>
+<body data-app="now-departing">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero" data-app="now-departing">
+  <span class="hero-bg" style="view-transition-name: room-now-departing"></span>
+  <div class="site-head" style="view-transition-name: hero-nav">
+    <a class="brand" href="../#now-departing">← All apps</a>
+    <nav aria-label="Site"><a href="../about/">About</a></nav>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="meta" style="view-transition-name: meta-now-departing">01 · Apple Watch &amp; iPhone · On the App Store</span>
+      <h1 style="view-transition-name: title-now-departing">Now Departing</h1>
+      <div class="hero-rest" style="view-transition-name: hero-rest">
+        <p class="tagline">Know when your train is coming. That’s it.</p>
+        <p class="desc">Live NYC Subway departure times for the train you’re trying to catch, right on your wrist. One glance, and you know whether to walk or run.</p>
+        <div class="actions"><a class="btn btn-primary" href="https://apps.apple.com/us/app/now-departing/id6740440448"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>App Store</a><a class="btn btn-ghost" href="https://nowdeparting.app">nowdeparting.app ↗</a></div>
+      </div>
+    </div>
+    <div class="hero-media"><img class="globe" style="view-transition-name: media-now-departing" src="../assets/img/now-departing/globe.webp" width="545" height="800" alt=""></div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section media-section" aria-labelledby="use">
+    <div class="section-head"><h2 id="use">See it in use</h2></div>
+    <div class="stage" style="--stage: #000000"><video autoplay muted loop playsinline preload="metadata" poster="../assets/img/now-departing/watch-poster.png" aria-label="Now Departing on Apple Watch, scrolling through stations and live departure times"><source src="../assets/video/now-departing-watch.mp4" type="video/mp4"></video></div>
+  </section>
+
+  <section class="section" aria-labelledby="details">
+    <div class="section-head"><h2 id="details">The details</h2></div>
+    <div class="details"><figure class="card"><div class="slot card-media" data-src="../assets/media/now-departing/closeup-1" data-exts="mp4,webm" data-kind="video" data-alt=""><div class="slot-ph"><span>Close-up loop, 4–8 s</span><code>assets/media/now-departing/closeup-1.mp4</code></div></div><figcaption><h3>Live times</h3><p>Straight from the MTA’s real-time feed, by way of @jonthornton’s MTAPI.</p></figcaption></figure><figure class="card"><div class="slot card-media" data-src="../assets/media/now-departing/closeup-2" data-exts="mp4,webm" data-kind="video" data-alt=""><div class="slot-ph"><span>Close-up loop, 4–8 s</span><code>assets/media/now-departing/closeup-2.mp4</code></div></div><figcaption><h3>Made for the wrist</h3><p>Big, glanceable countdowns. Nothing to plan, nothing to tap through.</p></figcaption></figure><figure class="card"><div class="slot card-media" data-src="../assets/media/now-departing/closeup-3" data-exts="mp4,webm" data-kind="video" data-alt=""><div class="slot-ph"><span>Close-up loop, 4–8 s</span><code>assets/media/now-departing/closeup-3.mp4</code></div></div><figcaption><h3>Just the subway</h3><p>NYC Subway only, on purpose. It does one thing.</p></figcaption></figure></div>
+  </section>
+
+  <section class="section" aria-labelledby="story">
+    <div class="story">
+      <div class="story-head"><h2 id="story">How it came together</h2></div>
+      <div class="prose">
+<h3>Design across scales</h3>
+<p>Designing for public signage versus designing for an individual, an iPhone or a watch comes with its own affordances and user needs. A public subway sign doesn’t care which train you are taking; it’s going to prioritize the one that is next. With Now Departing, I made considered decisions about not just what to show, but how to show it. Since you can use Google Maps or similar for detailed directions, Now Departing gets to focus on a different use case: “I know where I’m going, I do this every day, I just need to know when the train is coming.”</p>
+<h3>JavaScript on iOS</h3>
+<p>Now Departing started two years before the app existed, as a Scriptable widget. I wrote the few hundred lines of JavaScript while riding the subway. The goal was to make sure I never enter a subway station simply to find out I just missed a train and am now past the turnstile, instead of enjoying a matcha. I shared it on Twitter, and lots of people asked where they could get it. That was reason enough to turn it into a native app.</p>
+<blockquote class="quote"><p>I’d love to get feedback on a widget I made for iOS this weekend. I made it as a little present to myself and any other New Yorkers that ride the same Subway everyday.</p><a href="https://twitter.com/JonathanBobrow/status/1607868394996465665">Jonathan Bobrow on Twitter · December 27, 2022 ↗</a></blockquote>
+<figure><div class="slot " data-src="../assets/media/now-departing/process-1" data-exts="webp,jpg,png,gif" data-kind="image" data-alt="Scriptable widget sketches for showing train direction"><div class="slot-ph"><span>Process image</span><code>assets/media/now-departing/process-1.webp</code></div></div><figcaption>Explorations for how the widget could show train direction.</figcaption></figure>
+<h3>Native iOS (Swift)</h3>
+<p>The native version runs on iPhone and Apple Watch. The watch app was the real motivation: a glance at the wrist while walking down the stairs, departure time visible before you reach the turnstile. Getting an Apple Watch as a gift turned into a watchOS project, built with ChatGPT as an AI pair programmer, learning the platform’s patterns and constraints through conversation rather than documentation alone.</p>
+<p>The data comes from the MTA’s GTFS Realtime feed via MTAPI, the same source that powers wheresthef***ingtrain.com. The UI is directly inspired by Massimo Vignelli’s clean black and white typography and lines: departure times, line icons, nothing extra. Home screen widgets extend the same information without opening the app.</p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="next" aria-label="Next app">
+<a class="room" data-app="cookbo" href="../cookbo/">
+  <span class="room-bg" style="view-transition-name: room-cookbo"></span>
+  <span class="room-copy">
+    <span class="meta" style="view-transition-name: meta-cookbo">Next room · 02</span>
+    <h2 style="view-transition-name: title-cookbo">Cookbo<span class="produce" aria-hidden="true"><span class="drop" style="--spin:-40deg;--rest:0deg;--delay:.1s"><svg viewBox="0 0 64 60"><path d="M32 15C15 15 6 26 6 38c0 12 12 20 26 20s26-8 26-20C58 26 49 15 32 15Z" fill="#E8432D"/><path d="M50 26c6 8 5 20-6 26 7-7 9-17 6-26Z" fill="#C8321F"/><ellipse cx="19" cy="31" rx="6" ry="3.2" transform="rotate(-38 19 31)" fill="#FFB5A0"/><path d="M32 15C15 15 6 26 6 38c0 12 12 20 26 20s26-8 26-20C58 26 49 15 32 15Z" fill="none" stroke="#2A1B24" stroke-width="4"/><path d="M32 11l4 6 7-2-4 5 5 5-8-2-4 6-3-6-8 2 5-5-4-5 7 2z" fill="#5E9E2E" stroke="#2A1B24" stroke-width="2.6" stroke-linejoin="round"/><path d="M32 12c0-4 1-7 4-9" fill="none" stroke="#2A1B24" stroke-width="6" stroke-linecap="round"/><path d="M32 12c0-4 1-7 4-9" fill="none" stroke="#4E8A24" stroke-width="2.6" stroke-linecap="round"/></svg></span><span class="drop" style="--spin:30deg;--rest:-3deg;--delay:.22s"><svg viewBox="0 0 56 60"><path d="M22 34l-2 22c0 3 16 3 16 0l-2-22Z" fill="#A9D371" stroke="#2A1B24" stroke-width="4" stroke-linejoin="round"/><path d="M28 40v14M33 40l-1 10" fill="none" stroke="#86B84F" stroke-width="2.4" stroke-linecap="round"/><path d="M12 34C4 34 3 23 10 20 9 11 19 6 25 11c4-7 16-7 18 2 8-1 13 8 9 14 5 6-2 14-9 11-4 6-14 6-17 1-5 4-14 2-14-5Z" fill="#4E9B34"/><g fill="#3B7F26"><circle cx="17" cy="27" r="3.2"/><circle cx="30" cy="22" r="3.6"/><circle cx="41" cy="27" r="3"/><circle cx="26" cy="33" r="2.6"/></g><g fill="#7FC255"><circle cx="19" cy="17" r="2.6"/><circle cx="35" cy="13" r="2.2"/><circle cx="46" cy="21" r="1.8"/></g><path d="M12 34C4 34 3 23 10 20 9 11 19 6 25 11c4-7 16-7 18 2 8-1 13 8 9 14 5 6-2 14-9 11-4 6-14 6-17 1-5 4-14 2-14-5Z" fill="none" stroke="#2A1B24" stroke-width="4" stroke-linejoin="round"/></svg></span><span class="drop" style="--spin:-28deg;--rest:-7deg;--delay:.34s"><svg viewBox="0 0 64 44"><path d="M4 24c2-3 4-4 6-5 3-8 12-12 22-12s19 4 22 12c2 1 4 2 6 5-2 3-4 4-6 5-3 8-12 12-22 12S13 37 10 29c-2-1-4-2-6-5Z" fill="#FFD43B"/><path d="M17 17c4-4 10-5 15-5" fill="none" stroke="#FFF3B0" stroke-width="3.5" stroke-linecap="round"/><path d="M46 33c-4 3-9 4-14 4" fill="none" stroke="#E9B324" stroke-width="3" stroke-linecap="round"/><path d="M4 24c2-3 4-4 6-5 3-8 12-12 22-12s19 4 22 12c2 1 4 2 6 5-2 3-4 4-6 5-3 8-12 12-22 12S13 37 10 29c-2-1-4-2-6-5Z" fill="none" stroke="#2A1B24" stroke-width="4" stroke-linejoin="round"/><path d="M44 9c3-6 9-8 14-7-2 6-8 9-14 7Z" fill="#5E9E2E" stroke="#2A1B24" stroke-width="2.6" stroke-linejoin="round"/></svg></span><span class="drop" style="--spin:34deg;--rest:5deg;--delay:.46s"><svg viewBox="0 0 52 58"><path d="M26 56C14 50 6 38 6 28c0-8 6-14 20-14s20 6 20 14c0 10-8 22-20 28Z" fill="#E8363C"/><path d="M40 24c3 8 0 17-8 25 4-8 6-17 8-25Z" fill="#C4232A"/><path d="M12 27c1-4 4-7 8-8" fill="none" stroke="#FF9296" stroke-width="3" stroke-linecap="round"/><g fill="#FFD866"><ellipse cx="17" cy="33" rx="1.3" ry="2"/><ellipse cx="26" cy="30" rx="1.3" ry="2"/><ellipse cx="35" cy="33" rx="1.3" ry="2"/><ellipse cx="21" cy="41" rx="1.3" ry="2"/><ellipse cx="31" cy="41" rx="1.3" ry="2"/><ellipse cx="26" cy="48" rx="1.3" ry="2"/></g><path d="M26 56C14 50 6 38 6 28c0-8 6-14 20-14s20 6 20 14c0 10-8 22-20 28Z" fill="none" stroke="#2A1B24" stroke-width="4" stroke-linejoin="round"/><path d="M26 9l5 6 8-2-5 6 7 4-9 1-6 4-6-4-9-1 7-4-5-6 8 2z" fill="#5E9E2E" stroke="#2A1B24" stroke-width="2.6" stroke-linejoin="round"/><path d="M26 11c0-4 1-7 4-9" fill="none" stroke="#2A1B24" stroke-width="6" stroke-linecap="round"/><path d="M26 11c0-4 1-7 4-9" fill="none" stroke="#4E8A24" stroke-width="2.6" stroke-linecap="round"/></svg></span></span></h2>
+    <span class="room-rest" style="view-transition-name: rest-cookbo">
+      <span class="tagline">Every recipe you cook, in one place.</span>
+      <span class="cta">Step inside <span class="arr" aria-hidden="true">→</span></span>
+    </span>
+  </span>
+  <span class="room-media"><img class="app-icon tilt-r" style="view-transition-name: extra-cookbo" src="../assets/img/cookbo/icon.png" width="512" height="512" alt=""><span class="peek" style="view-transition-name: media-cookbo"><img src="../assets/img/cookbo/recipe.webp" alt=""></span></span>
+</a>
+  </nav>
+</main>
+
+<footer class="site-foot">
+  <a class="brand" href="../">Jon Bobrow</a>
+  <p><a href="../about/">About</a> · Made with heart and AI.</p>
+</footer>
+</body>
+</html>
