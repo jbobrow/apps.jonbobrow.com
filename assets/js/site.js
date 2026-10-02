@@ -74,3 +74,13 @@ document.querySelectorAll('.slot[data-src]').forEach((slot) => {
   };
   tryExt(0);
 });
+
+
+// Opening a room: name just that room's pieces, right before the browser takes its snapshot.
+document.addEventListener('click', (e) => {
+  const room = e.target.closest('a.room');
+  if (!room || !window.rooms || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  window.rooms.openRoom(room);
+});
+// Coming back to a page from the back/forward cache without a transition: start clean.
+window.addEventListener('pageshow', (e) => { if (e.persisted && window.rooms) setTimeout(window.rooms.clearRooms, 1000); });

@@ -11,6 +11,7 @@ about/index.html        About page
 <app>/index.html        One page per app: now-departing, cookbo, pointerpals,
                         evening-reader, audio-bubble, nyc-parking
 assets/css/site.css     All styles, app colors, and the page transition
+assets/css/fonts.css    Bricolage Grotesque, inlined (SIL Open Font License)
 assets/js/head.js       Runs before first paint (draft mode, transition type)
 assets/js/site.js       Cookbo’s produce drop, smooth scroll from the intro words
 assets/img/<app>/       Icons and screenshots (webp), from each app’s AppStore folder
@@ -49,9 +50,22 @@ When a draft is ready, remove `draft` from its `<section>` and the “Draft” t
 
 ## The page transition
 
-“Room expands” uses cross-document View Transitions (Chrome/Edge 126+, Safari 18.2+). Other browsers just navigate normally.
-Each room on the homepage and each app page’s hero share `view-transition-name`s: `room-<app>` (the color), `title-<app>`, `meta-<app>` and `media-<app>` (the main image).
-If you rename or add an app, keep those names matching on both sides. People who prefer reduced motion get no transition.
+“Room expands” uses cross-document View Transitions (Chrome/Edge 126+, Safari 18.2+). Other browsers just navigate normally, and people who prefer reduced motion get no transition.
+
+How it stays clean:
+- Only the room being opened (or returned to) is named, by `assets/js/head.js` and `site.js`, so the browser snapshots a handful of pieces instead of every room.
+- Each room is marked up with `data-vt` pieces: `room` (the color), `meta`, `title` and `media` travel together; `rest`, `extra` and `nav` fade out or in around them. On app pages the hero carries the same names statically.
+- Each moving piece is drawn from one snapshot, never two cross-faded: opening uses the new (larger) page, going back keeps the old (larger) one. That’s why the title and phone stay sharp.
+- Whatever sits under the room on screen (the next rooms, the footer) stays glued to the room’s bottom edge: pushed down and dissolving as a room opens, rising back up with it as it closes.
+- Phone screenshots keep one shape (9:16) at every size, and titles hug their text and never wrap (they size to their column), so nothing stretches mid-flight.
+- The font is inlined in `assets/css/fonts.css`, so no text ever swaps to a fallback font during a transition.
+
+Watch it in slow motion: add `?slowmo` to any URL (10× slower, remembered for the tab), `?slowmo=4` for 4×, `?slowmo=0` to turn it off.
+Timing lives at the top of the “Room expands” section in `site.css` (`--vt-move`, `--vt-ease`).
+
+## Layout sizes
+
+Rooms and app headers stay two columns down to 641 px wide (iPad portrait included), with pictures and titles scaling to fit; below 900 px each room shows just its main picture. Phones (640 px and under) stack.
 
 ## App colors
 

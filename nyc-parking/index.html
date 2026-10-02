@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-page="app">
+<html lang="en" data-page="app" data-app="nyc-parking">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -10,10 +10,9 @@
 <meta property="og:url" content="https://app.jonbobrow.com/nyc-parking/">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/img/nyc-parking/icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fonts.css">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="expect" href="#hero-end" blocking="render">
 <script src="../assets/js/head.js"></script>
 <script src="../assets/js/site.js" defer></script>
 </head>
@@ -21,24 +20,25 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="hero" data-app="nyc-parking">
-  <span class="hero-bg" style="view-transition-name: room-nyc-parking"></span>
-  <div class="site-head" style="view-transition-name: hero-nav">
+  <span class="hero-bg" data-vt="room" style="view-transition-name: room-nyc-parking"></span>
+  <div class="site-head" data-vt="nav" style="view-transition-name: hero-nav">
     <a class="brand" href="../#nyc-parking">← All apps</a>
     <nav aria-label="Site"><a href="../about/">About</a></nav>
   </div>
   <div class="hero-inner">
     <div class="hero-copy">
-      <span class="meta" style="view-transition-name: meta-nyc-parking">06 · iPhone · On the App Store</span>
-      <h1 style="view-transition-name: title-nyc-parking">NYC Parking</h1>
-      <div class="hero-rest" style="view-transition-name: hero-rest">
+      <span class="meta" data-vt="meta" style="view-transition-name: meta-nyc-parking">06 · iPhone · On the App Store</span>
+      <h1 data-vt="title" style="view-transition-name: title-nyc-parking">NYC Parking</h1>
+      <div class="hero-rest" data-vt="rest" style="view-transition-name: hero-rest">
         <p class="tagline">Know before you park.</p>
         <p class="desc">Alternate-side parking rules for every block in New York City on a live map, color-coded by day, with a reminder before it’s time to move the car.</p>
         <div class="actions"><a class="btn btn-primary" href="https://apps.apple.com/app/id6762587893"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>App Store</a><a class="btn btn-ghost" href="https://nycparking.jonbobrow.com">nycparking.jonbobrow.com ↗</a></div>
       </div>
     </div>
-    <div class="hero-media"><span class="peek" style="view-transition-name: media-nyc-parking"><img src="../assets/img/nyc-parking/countdown.webp" alt="NYC Parking showing when you need to move your car"></span></div>
+    <div class="hero-media"><span class="peek" data-vt="media" style="view-transition-name: media-nyc-parking"><img decoding="sync" src="../assets/img/nyc-parking/countdown.webp" alt="NYC Parking showing when you need to move your car"></span></div>
   </div>
 </header>
+<span id="hero-end"></span>
 
 <main id="main">
   <section class="section media-section" aria-labelledby="use">
@@ -73,16 +73,16 @@
 
   <nav class="next" aria-label="Next app">
 <a class="room" data-app="now-departing" href="../now-departing/">
-  <span class="room-bg" style="view-transition-name: room-now-departing"></span>
+  <span class="room-bg" data-vt="room"></span>
   <span class="room-copy">
-    <span class="meta" style="view-transition-name: meta-now-departing">Next room · 01</span>
-    <h2 style="view-transition-name: title-now-departing">Now Departing</h2>
-    <span class="room-rest" style="view-transition-name: rest-now-departing">
+    <span class="meta" data-vt="meta">Next room · 01</span>
+    <h2 data-vt="title">Now Departing</h2>
+    <span class="room-rest" data-vt="rest">
       <span class="tagline">Know when your train is coming. That’s it.</span>
       <span class="cta">Step inside <span class="arr" aria-hidden="true">→</span></span>
     </span>
   </span>
-  <span class="room-media"><video class="watch" style="view-transition-name: extra-now-departing" autoplay muted loop playsinline preload="metadata" poster="../assets/img/now-departing/watch-poster.png" aria-hidden="true"><source src="../assets/video/now-departing-watch.mp4" type="video/mp4"></video><img class="globe low" style="view-transition-name: media-now-departing" src="../assets/img/now-departing/globe.webp" width="545" height="800" alt=""></span>
+  <span class="room-media"><video class="watch hide-sm" data-vt="extra" autoplay muted loop playsinline preload="metadata" poster="../assets/img/now-departing/watch-poster.png" aria-hidden="true"><source src="../assets/video/now-departing-watch.mp4" type="video/mp4"></video><img class="globe low" data-vt="media" src="../assets/img/now-departing/globe.webp" width="545" height="800" alt=""></span>
 </a>
   </nav>
 </main>

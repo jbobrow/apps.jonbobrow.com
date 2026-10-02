@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-page="app">
+<html lang="en" data-page="app" data-app="audio-bubble">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -10,10 +10,9 @@
 <meta property="og:url" content="https://app.jonbobrow.com/audio-bubble/">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/img/audio-bubble/icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fonts.css">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="expect" href="#hero-end" blocking="render">
 <script src="../assets/js/head.js"></script>
 <script src="../assets/js/site.js" defer></script>
 </head>
@@ -21,24 +20,25 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="hero" data-app="audio-bubble">
-  <span class="hero-bg" style="view-transition-name: room-audio-bubble"></span>
-  <div class="site-head" style="view-transition-name: hero-nav">
+  <span class="hero-bg" data-vt="room" style="view-transition-name: room-audio-bubble"></span>
+  <div class="site-head" data-vt="nav" style="view-transition-name: hero-nav">
     <a class="brand" href="../#audio-bubble">← All apps</a>
     <nav aria-label="Site"><a href="../about/">About</a></nav>
   </div>
   <div class="hero-inner">
     <div class="hero-copy">
-      <span class="meta" style="view-transition-name: meta-audio-bubble">05 · iPhone · Coming soon</span>
-      <h1 style="view-transition-name: title-audio-bubble">Audio Bubble</h1>
-      <div class="hero-rest" style="view-transition-name: hero-rest">
+      <span class="meta" data-vt="meta" style="view-transition-name: meta-audio-bubble">05 · iPhone · Coming soon</span>
+      <h1 data-vt="title" style="view-transition-name: title-audio-bubble">Audio Bubble</h1>
+      <div class="hero-rest" data-vt="rest" style="view-transition-name: hero-rest">
         <p class="tagline">Hear the people you’re with, even in loud places.</p>
         <p class="desc">At a concert, a busy bar or a crowded street, Audio Bubble puts the people you’re with right in your ears. Put in your headphones, tap the friends you want, and you’re in a bubble together.</p>
         <div class="actions"><span class="soon">Coming soon</span><a class="btn btn-ghost" href="https://audiobubble.jonbobrow.com">audiobubble.jonbobrow.com ↗</a></div>
       </div>
     </div>
-    <div class="hero-media"><span class="peek" style="view-transition-name: media-audio-bubble"><img src="../assets/img/audio-bubble/bubble.webp" alt="A bubble of friends in Audio Bubble"></span></div>
+    <div class="hero-media"><span class="peek" data-vt="media" style="view-transition-name: media-audio-bubble"><img decoding="sync" src="../assets/img/audio-bubble/bubble.webp" alt="A bubble of friends in Audio Bubble"></span></div>
   </div>
 </header>
+<span id="hero-end"></span>
 
 <main id="main">
   <section class="section media-section" aria-labelledby="use">
@@ -73,16 +73,16 @@
 
   <nav class="next" aria-label="Next app">
 <a class="room" data-app="nyc-parking" href="../nyc-parking/">
-  <span class="room-bg" style="view-transition-name: room-nyc-parking"></span>
+  <span class="room-bg" data-vt="room"></span>
   <span class="room-copy">
-    <span class="meta" style="view-transition-name: meta-nyc-parking">Next room · 06</span>
-    <h2 style="view-transition-name: title-nyc-parking">NYC Parking</h2>
-    <span class="room-rest" style="view-transition-name: rest-nyc-parking">
+    <span class="meta" data-vt="meta">Next room · 06</span>
+    <h2 data-vt="title">NYC Parking</h2>
+    <span class="room-rest" data-vt="rest">
       <span class="tagline">Know before you park.</span>
       <span class="cta">Step inside <span class="arr" aria-hidden="true">→</span></span>
     </span>
   </span>
-  <span class="room-media"><span class="peek" style="view-transition-name: media-nyc-parking"><img src="../assets/img/nyc-parking/countdown.webp" alt=""></span><span class="peek up hide-sm" style="view-transition-name: extra-nyc-parking"><img src="../assets/img/nyc-parking/days.webp" alt=""></span></span>
+  <span class="room-media"><span class="peek" data-vt="media"><img src="../assets/img/nyc-parking/countdown.webp" alt=""></span><span class="peek up hide-sm" data-vt="extra"><img src="../assets/img/nyc-parking/days.webp" alt=""></span></span>
 </a>
   </nav>
 </main>

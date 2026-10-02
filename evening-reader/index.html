@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-page="app">
+<html lang="en" data-page="app" data-app="evening-reader">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -10,10 +10,9 @@
 <meta property="og:url" content="https://app.jonbobrow.com/evening-reader/">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/img/evening-reader/icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fonts.css">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="expect" href="#hero-end" blocking="render">
 <script src="../assets/js/head.js"></script>
 <script src="../assets/js/site.js" defer></script>
 </head>
@@ -21,24 +20,25 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="hero" data-app="evening-reader">
-  <span class="hero-bg" style="view-transition-name: room-evening-reader"></span>
-  <div class="site-head" style="view-transition-name: hero-nav">
+  <span class="hero-bg" data-vt="room" style="view-transition-name: room-evening-reader"></span>
+  <div class="site-head" data-vt="nav" style="view-transition-name: hero-nav">
     <a class="brand" href="../#evening-reader">← All apps</a>
     <nav aria-label="Site"><a href="../about/">About</a></nav>
   </div>
   <div class="hero-inner">
     <div class="hero-copy">
-      <span class="meta" style="view-transition-name: meta-evening-reader">04 · iPhone &amp; iPad</span>
-      <h1 style="view-transition-name: title-evening-reader">Evening Reader</h1>
-      <div class="hero-rest" style="view-transition-name: hero-rest">
+      <span class="meta" data-vt="meta" style="view-transition-name: meta-evening-reader">04 · iPhone &amp; iPad</span>
+      <h1 data-vt="title" style="view-transition-name: title-evening-reader">Evening Reader</h1>
+      <div class="hero-rest" data-vt="rest" style="view-transition-name: hero-rest">
         <p class="tagline">Read later, on an amber panel.</p>
         <p class="desc">Save articles, books and PDFs, then read them offline on a warm amber page you tune with three sliders: warmth, brightness and contrast. Built for winding down.</p>
         <div class="actions"><!-- TODO: add the App Store link when it’s live --><a class="btn btn-ghost" href="https://eveningreader.jonbobrow.com">eveningreader.jonbobrow.com ↗</a></div>
       </div>
     </div>
-    <div class="hero-media"><span class="peek" style="view-transition-name: media-evening-reader"><img src="../assets/img/evening-reader/reader.webp" alt="An article in Evening Reader, with a diagram drawn as ink on the page"></span></div>
+    <div class="hero-media"><span class="peek" data-vt="media" style="view-transition-name: media-evening-reader"><img decoding="sync" src="../assets/img/evening-reader/reader.webp" alt="An article in Evening Reader, with a diagram drawn as ink on the page"></span></div>
   </div>
 </header>
+<span id="hero-end"></span>
 
 <main id="main">
   <section class="section media-section" aria-labelledby="use">
@@ -73,16 +73,16 @@
 
   <nav class="next" aria-label="Next app">
 <a class="room" data-app="audio-bubble" href="../audio-bubble/">
-  <span class="room-bg" style="view-transition-name: room-audio-bubble"></span>
+  <span class="room-bg" data-vt="room"></span>
   <span class="room-copy">
-    <span class="meta" style="view-transition-name: meta-audio-bubble">Next room · 05</span>
-    <h2 style="view-transition-name: title-audio-bubble">Audio Bubble</h2>
-    <span class="room-rest" style="view-transition-name: rest-audio-bubble">
+    <span class="meta" data-vt="meta">Next room · 05</span>
+    <h2 data-vt="title">Audio Bubble</h2>
+    <span class="room-rest" data-vt="rest">
       <span class="tagline">Hear the people you’re with, even in loud places.</span>
       <span class="cta">Step inside <span class="arr" aria-hidden="true">→</span></span>
     </span>
   </span>
-  <span class="room-media"><span class="bubbles hide-sm" style="view-transition-name: extra-audio-bubble" aria-hidden="true"><span class="b1"></span><span class="b2"></span></span><span class="peek" style="view-transition-name: media-audio-bubble"><img src="../assets/img/audio-bubble/bubble.webp" alt=""></span></span>
+  <span class="room-media"><span class="bubbles hide-sm" data-vt="extra" aria-hidden="true"><span class="b1"></span><span class="b2"></span></span><span class="peek" data-vt="media"><img src="../assets/img/audio-bubble/bubble.webp" alt=""></span></span>
 </a>
   </nav>
 </main>
