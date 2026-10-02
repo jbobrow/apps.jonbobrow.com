@@ -253,6 +253,7 @@ html:not(.show-drafts) .draft { display: none; }
 .slot-fallback { height: 100%; }
 html:not(.show-drafts) .slot-ph.badge,
 html:not(.show-drafts) .slot:not(.loaded):not(.has-fallback) { display: none; }
+html:not(.show-drafts) figure:has(> .slot:not(.loaded):not(.has-fallback)) { display: none; }   /* no caption without its picture */
 html:not(.show-drafts) .media-section:not(:has(.loaded, .shot, .stage > video)) { display: none; }
 
 .stage .slot { width: min(420px, 100%); border-radius: 30px; overflow: hidden; }
