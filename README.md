@@ -23,7 +23,7 @@ CNAME                   apps.jonbobrow.com
 ## Preview locally
 
 ```
-cd ~/Developer/app.jonbobrow.com
+cd ~/Developer/apps.jonbobrow.com
 python3 -m http.server 8000
 ```
 Then open http://localhost:8000. (Opening index.html directly works too, but the page transition needs a server.)
@@ -88,12 +88,12 @@ In `assets/css/site.css`, under “App themes”: `--bg` (room color), `--fg` (t
 
 ## Deploy (GitHub Pages)
 
-1. Create an empty repo on GitHub, e.g. `jbobrow/app.jonbobrow.com`.
+1. Create an empty repo on GitHub, e.g. `jbobrow/apps.jonbobrow.com`.
 2. Push:
    ```
    git add -A && git commit -m "First version of apps.jonbobrow.com"
    git branch -M main
-   git remote add origin git@github.com:jbobrow/app.jonbobrow.com.git
+   git remote add origin git@github.com:jbobrow/apps.jonbobrow.com.git
    git push -u origin main
    ```
 3. On GitHub: Settings → Pages → Source: “Deploy from a branch”, Branch: `main` / root.
