@@ -1,4 +1,4 @@
-// app.jonbobrow.com — small bits of behavior. Nothing here is required for the site to work.
+// apps.jonbobrow.com — small bits of behavior. Nothing here is required for the site to work.
 (() => {
   const root = document.documentElement;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;

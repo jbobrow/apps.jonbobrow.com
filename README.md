@@ -1,4 +1,4 @@
-# app.jonbobrow.com
+# apps.jonbobrow.com
 
 A small gallery of the apps I make: one colored “room” per app on the homepage, and a page for each app.
 Plain HTML, CSS and a little JavaScript. There’s no build step: GitHub Pages serves the files as they are.
@@ -17,7 +17,7 @@ assets/js/site.js       Cookbo’s produce drop, smooth scroll from the intro wo
 assets/img/<app>/       Icons and screenshots (webp), from each app’s AppStore folder
 assets/video/           Now Departing watch loop, Audio Bubble app preview
 assets/media/<app>/     Your demo videos, close-ups and process images (see “Placeholders”)
-CNAME                   app.jonbobrow.com
+CNAME                   apps.jonbobrow.com
 ```
 
 ## Preview locally
@@ -91,7 +91,7 @@ In `assets/css/site.css`, under “App themes”: `--bg` (room color), `--fg` (t
 1. Create an empty repo on GitHub, e.g. `jbobrow/app.jonbobrow.com`.
 2. Push:
    ```
-   git add -A && git commit -m "First version of app.jonbobrow.com"
+   git add -A && git commit -m "First version of apps.jonbobrow.com"
    git branch -M main
    git remote add origin git@github.com:jbobrow/app.jonbobrow.com.git
    git push -u origin main
