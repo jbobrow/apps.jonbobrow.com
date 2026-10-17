@@ -41,7 +41,7 @@ Placeholders fill themselves in. Each one looks for a file by name and shows it 
 | App page, “See it in use” | `assets/media/<app>/demo.mp4` | Portrait screen recording, 30–60 s. Cookbo, PointerPals, Evening Reader, NYC Parking. |
 | App page, “The details” cards | `assets/media/<app>/closeup-1.mp4`, `-2`, `-3` (`-4`) | Short silent loops, 4–8 s, in card order. Until then the card shows its screenshot. |
 | App page, “How it came together” | `assets/media/<app>/process-1.webp`, `process-2.webp` | Sketches, early builds, prompts. `.jpg`, `.png` or `.gif` work too. |
-| About page | `assets/media/about/portrait.webp`, `workspace.webp` | Portrait around 4:5. |
+| About page | `assets/media/about/workspace.webp` | The portrait is filled: `portrait.webm`/`.mp4` + `portrait-poster.jpg`, a 4:5 smile timelapse (544×680, silent loop). |
 
 Videos can be `.mp4` or `.webm`; keep them small (H.264, about 720 px wide, no audio for loops). For example:
 `ffmpeg -i in.mov -vf scale=720:-2 -c:v libx264 -crf 26 -an -movflags +faststart closeup-1.mp4`
@@ -105,7 +105,7 @@ In `assets/css/site.css`, under “App themes”: `--bg` (room color), `--fg` (t
 
 - Evening Reader: add the App Store link once it’s live (see the TODO in `evening-reader/index.html`).
 - Write “How it came together” for Evening Reader, Audio Bubble and NYC Parking, and the About page’s “How I make these apps”.
-- Drop in demo videos, close-ups, process images and a portrait (see the table above).
+- Drop in demo videos, close-ups, process images and the workspace photo (see the table above).
 - Set `LAUNCHED = true` in `assets/js/head.js`.
 
 ## Deploy (GitHub Pages)
