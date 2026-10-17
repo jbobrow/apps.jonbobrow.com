@@ -6,7 +6,7 @@ Plain HTML, CSS and a little JavaScript. There’s no build step: GitHub Pages s
 ## Structure
 
 ```
-index.html              Homepage: intro paragraph + one room (band) per app
+index.html              Homepage: intro paragraph + one room (band) per app, then an “Also made” line
 about/index.html        About page
 <app>/index.html        One page per app: now-departing, cookbo, pointerpals,
                         evening-reader, audio-bubble, nyc-parking
@@ -14,7 +14,8 @@ assets/css/site.css     All styles, app colors, and the page transition
 assets/css/fonts.css    Bricolage Grotesque, inlined (SIL Open Font License)
 assets/js/head.js       Runs before first paint (draft mode, transition type)
 assets/js/site.js       Cookbo’s produce drop, smooth scroll from the intro words
-assets/img/<app>/       Icons and screenshots (webp), from each app’s AppStore folder
+assets/img/<app>/       Icons and screenshots (webp), from each app’s AppStore folder,
+                        and og.png, the app page’s share image (see “Share images”)
 assets/video/           Now Departing watch loop, Audio Bubble app preview
 assets/media/<app>/     Your demo videos, close-ups and process images (see “Placeholders”)
 CNAME                   apps.jonbobrow.com
@@ -67,6 +68,28 @@ Timing lives at the top of the “Room expands” section in `site.css` (`--vt-m
 
 Rooms and app headers stay two columns down to 641 px wide (iPad portrait included), with pictures and titles scaling to fit; below 900 px each room shows just its main picture. Phones (640 px and under) stack.
 
+## Share images
+
+Each app page shares as its app’s own preview, `assets/img/<app>/og.png` (2400×1260): icon and name, the tagline big, one line on what it does, the signature, and the app on the right.
+They’re copies of the image on each app’s own website, where the source lives:
+
+| App | Source | Rendered to |
+|---|---|---|
+| Now Departing | `NowDeparting.App/_og/og-image.html` | `img/og-image.png` |
+| NYC Parking | `NYC-Parking/AppStore/Creative/og.html` (on your Mac; `AppStore/` isn’t in the repo) | `docs/og.png` |
+| Cookbo | `Cookbo/og/og-image.html` | `docs/assets/images/og-image.png` |
+| PointerPals | `PointerPals/_og/og-image.html` | `assets/og-image.png` |
+| Evening Reader | `Evening-Reader/og/og-image.html` | `docs/assets/og-image.png` |
+| Audio Bubble | `AudioBubble/og/og-image.html` | `docs/og-image.png` |
+
+Every source folder except NYC Parking’s has a `render.sh`. After re-rendering, copy the PNG here as `og.png`.
+The homepage and About page share `assets/img/og.png`, the six icons.
+
+## Also made
+
+Things I make that aren’t apps (no icon, no App Store page) go in the “Also made” line under the rooms instead of getting a room, starting with NYC Rent.
+It moves with the rooms during the page transition: `head.js` includes `.also` with the rooms and footer.
+
 ## App colors
 
 In `assets/css/site.css`, under “App themes”: `--bg` (room color), `--fg` (text), `--meta` (the small line above the title), and the primary button colors.
@@ -84,7 +107,6 @@ In `assets/css/site.css`, under “App themes”: `--bg` (room color), `--fg` (t
 - Write “How it came together” for Evening Reader, Audio Bubble and NYC Parking, and the About page’s “How I make these apps”.
 - Drop in demo videos, close-ups, process images and a portrait (see the table above).
 - Set `LAUNCHED = true` in `assets/js/head.js`.
-- Social preview images (`og:image`) for each page.
 
 ## Deploy (GitHub Pages)
 

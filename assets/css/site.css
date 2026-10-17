@@ -50,7 +50,19 @@ a { color: inherit; }
   display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center;
   padding: 44px var(--gutter) 48px; font-size: 17px;
 }
-.site-foot .brand { font-size: 17px; }
+.site-foot .sig-link { display: block; color: var(--muted); transition: color .15s; }
+.site-foot .sig-link:hover { color: var(--ink); }
+.site-foot .sig-link svg { display: block; width: 160px; height: auto; }
+
+/* "Also made": a quiet line under the rooms for things that aren't apps */
+.also {
+  margin: 0; padding: clamp(40px, 5vw, 64px) var(--gutter) 0;
+  max-width: calc(36em + 2 * var(--gutter));
+  font-size: clamp(17px, 1.4vw, 19px); line-height: 1.55; color: var(--muted);
+}
+.also-label { display: block; margin-bottom: 6px; font-size: 15px; font-weight: 600; color: var(--ink); }
+.also a { color: var(--ink); font-weight: 600; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.also a:hover { opacity: .7; }
 .site-foot p { margin: 0; color: var(--muted); }
 
 /* ─── Intro ─── */
