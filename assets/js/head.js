@@ -30,13 +30,13 @@
     const slug = room.dataset.app;
     room.querySelectorAll('[data-vt]').forEach((el) => { el.style.viewTransitionName = `${el.dataset.vt}-${slug}`; });
   };
-  // Whatever sits under that room on screen (the next rooms, the footer) rides along with its bottom edge.
+  // Whatever sits under that room on screen (the next rooms, the Also line, the footer) rides along with its bottom edge.
   const nameBelow = (room) => {
     let n = 0;
-    for (const el of document.querySelectorAll('a.room, .site-foot')) {
+    for (const el of document.querySelectorAll('a.room, .also, .site-foot')) {
       if (el === room || !(room.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING)) continue;
       const r = el.getBoundingClientRect();
-      if (r.top >= innerHeight || n === 4) break;
+      if (r.top >= innerHeight || n === 5) break;
       if (r.bottom <= 0) continue;
       n += 1;
       el.style.viewTransitionName = `below-${n}`;
@@ -45,7 +45,7 @@
     return n;
   };
   const clearRooms = () => {
-    document.querySelectorAll('a.room [data-vt], a.room, .site-foot').forEach((el) => {
+    document.querySelectorAll('a.room [data-vt], a.room, .also, .site-foot').forEach((el) => {
       if (el.closest('.hero')) return;
       el.style.viewTransitionName = '';
       el.style.viewTransitionClass = '';
@@ -74,7 +74,7 @@
       easing: getComputedStyle(html).getPropertyValue('--vt-ease').trim() || 'ease-in-out',
       fill: 'both',
     };
-    for (let i = 1; i <= 4; i += 1) {
+    for (let i = 1; i <= 5; i += 1) {
       const group = `::view-transition-group(below-${i})`;
       if (arriving) {
         // Coming back: the rooms below start at the big room's bottom edge and rise with it, fading in early.
