@@ -50,7 +50,9 @@ a { color: inherit; }
   display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center;
   padding: 44px var(--gutter) 48px; font-size: 17px;
 }
-.site-foot .brand { font-size: 17px; }
+.site-foot .sig-link { display: block; color: var(--muted); transition: color .15s; }
+.site-foot .sig-link:hover { color: var(--ink); }
+.site-foot .sig-link svg { display: block; width: 160px; height: auto; }
 
 /* "Also made": a quiet line under the rooms for things that aren't apps */
 .also {
