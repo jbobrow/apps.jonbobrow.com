@@ -47,6 +47,15 @@ document.querySelectorAll('.intro a.kw[href^="#"]').forEach((a) => {
 });
 
 
+// About portrait: people who prefer reduced motion get the still poster instead of the timelapse.
+document.querySelectorAll('.portrait > video').forEach((v) => {
+  const rm = matchMedia('(prefers-reduced-motion: reduce)');
+  const apply = () => { if (rm.matches) { v.pause(); v.currentTime = 0; } else { v.play().catch(() => {}); } };
+  apply();
+  rm.addEventListener('change', apply);
+});
+
+
 // Slots: show a file if it exists at data-src + one of data-exts, otherwise keep the placeholder.
 document.querySelectorAll('.slot[data-src]').forEach((slot) => {
   const base = slot.dataset.src;
