@@ -57,17 +57,27 @@
     <div class="details"><figure class="card"><div class="slot card-media" data-src="../assets/media/pointerpals/closeup-1" data-exts="mp4,webm" data-kind="video" data-alt=""><div class="slot-ph"><span>Close-up loop, 4–8 s</span><code>assets/media/pointerpals/closeup-1.mp4</code></div></div><figcaption><h3>Share your cursor</h3><p>Your pointer’s position, live, with the friends you choose.</p></figcaption></figure><figure class="card"><div class="slot card-media" data-src="../assets/media/pointerpals/closeup-2" data-exts="mp4,webm" data-kind="video" data-alt=""><div class="slot-ph"><span>Close-up loop, 4–8 s</span><code>assets/media/pointerpals/closeup-2.mp4</code></div></div><figcaption><h3>Names on cursors</h3><p>See who’s who at a glance.</p></figcaption></figure><figure class="card"><div class="slot card-media" data-src="../assets/media/pointerpals/closeup-3" data-exts="mp4,webm" data-kind="video" data-alt=""><div class="slot-ph"><span>Close-up loop, 4–8 s</span><code>assets/media/pointerpals/closeup-3.mp4</code></div></div><figcaption><h3>Fades when idle</h3><p>A friend’s cursor fades out after a few seconds of stillness, and comes back when they move.</p></figcaption></figure><figure class="card"><div class="slot card-media" data-src="../assets/media/pointerpals/closeup-4" data-exts="mp4,webm" data-kind="video" data-alt=""><div class="slot-ph"><span>Close-up loop, 4–8 s</span><code>assets/media/pointerpals/closeup-4.mp4</code></div></div><figcaption><h3>Stays out of the way</h3><p>Cursors float above every window but never block a click. It lives in the menu bar.</p></figcaption></figure></div>
   </section>
 
-  <section class="section" aria-labelledby="story">
+  <section class="section draft" aria-labelledby="story">
     <div class="story">
-      <div class="story-head"><h2 id="story">How it came together</h2></div>
+      <div class="story-head"><h2 id="story">How it came together <span class="draft-tag">Draft</span></h2></div>
       <div class="prose">
+<h3>From the Media Lab</h3>
+<p>PointerPals started with CheWei of CW&amp;T while we were at the MIT Media Lab. Years later I came back to it, because I realized I could now make a really refined version of the idea as a native app.</p>
 <h3>A quieter kind of presence</h3>
 <p>Remote work flattened presence into a series of video calls and status dots. PointerPals is a quieter experiment: what if you could just see where your collaborators’ cursors were, right on your screen, without any meeting or notification?</p>
 <p>The app renders remote cursors as a transparent, always-on-top overlay. They show up labeled with a name, move in real time at 30 frames per second, and fade after five seconds of inactivity. They don’t block anything. They don’t ask for attention. They’re just there, a peripheral signal that someone else is working too.</p>
 <h3>How it works</h3>
 <p>The architecture uses normalized coordinates so cursor positions translate correctly across different screen sizes. A WebSocket server running on Google Cloud handles the pub/sub layer. The macOS client is Swift and SwiftUI; a Windows client exists in C# and WPF for cross-platform pairs.</p>
+<figure><div class="slot " data-src="../assets/media/pointerpals/process-1" data-exts="webp,jpg,png,gif" data-kind="image" data-alt="Two Macs with different screen sizes sharing a cursor position through a WebSocket server"><div class="slot-ph"><span>Process image</span><code>assets/media/pointerpals/process-1.webp</code></div></div><figcaption>A cursor travels as a fraction of the screen, so it lands in the same place on any display.</figcaption></figure>
+<h3>Ten days in January</h3>
+<p>The Mac app came together in about ten days, and some of the best changes were subtractions: fewer permission prompts, a smaller menu, and a welcome window instead of a string of alerts.</p>
+<figure><div class="slot " data-src="../assets/media/pointerpals/process-3" data-exts="webp,jpg,png,gif" data-kind="image" data-alt="A timeline of the PointerPals Mac app in January 2026"><div class="slot-ph"><span>Process image</span><code>assets/media/pointerpals/process-3.webp</code></div></div><figcaption>January 2026, from the commit log.</figcaption></figure>
+<h3>Company</h3>
+<p>It’s been installed on my computer ever since, and I always have CheWei’s cursor keeping me company while I work. Every so often our cursors dance: we circle each other rapidly, and it puts a big smile on my face. It’s only slightly confusing when I’m presenting to others.</p>
+<figure><div class="slot " data-src="../assets/media/pointerpals/process-2" data-exts="webp,jpg,png,gif" data-kind="image" data-alt="Two cursors circling each other, and a second cursor on a presentation slide"><div class="slot-ph"><span>Process image</span><code>assets/media/pointerpals/process-2.webp</code></div></div><figcaption>The dance, and the occasional surprise guest on a slide. Illustrations.</figcaption></figure>
+<h3>The website</h3>
 <p>The website demonstrates the idea without any installation: two animated cursors trace paths across the page, showing exactly what the experience feels like before you download anything.</p>
-<div class="draft"><h3>Working with AI <span class="draft-tag">Draft</span></h3><p>[What you asked for, what it got wrong, what you kept. Quote a prompt.]</p><figure><div class="slot " data-src="../assets/media/pointerpals/process-1" data-exts="webp,jpg,png,gif" data-kind="image" data-alt=""><div class="slot-ph"><span>Process image: a sketch, an early build, a prompt</span><code>assets/media/pointerpals/process-1.webp</code></div></div></figure></div>
+<figure><div class="slot " data-src="../assets/media/pointerpals/process-4" data-exts="webp,jpg,png,gif" data-kind="image" data-alt="The PointerPals website"><div class="slot-ph"><span>Process image</span><code>assets/media/pointerpals/process-4.webp</code></div></div><figcaption>pointerpals.jonbobrow.com</figcaption></figure>
 <h3>The name</h3>
 <p>The name came easily. They follow you around. They’re your pals.</p>
       </div>
