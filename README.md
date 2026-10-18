@@ -40,13 +40,13 @@ Placeholders fill themselves in. Each one looks for a file by name and shows it 
 |---|---|---|
 | App page, “See it in use” | `assets/media/<app>/demo.mp4` | Portrait screen recording, 30–60 s. Cookbo, PointerPals, Evening Reader, NYC Parking. |
 | App page, “The details” cards | `assets/media/<app>/closeup-1.mp4`, `-2`, `-3` (`-4`) | Short silent loops, 4–8 s, in card order. Until then the card shows its screenshot. |
-| App page, “How it came together” | `assets/media/<app>/process-1.webp`, `process-2.webp` | Sketches, early builds, prompts. `.jpg`, `.png` or `.gif` work too. |
+| App page, “How it came together” | `assets/media/<app>/process-1.webp`, `process-2.webp`, … | Version timelines, diagrams, data stills and old screenshots; each app’s story now has 4 to 15. Replace any file to swap its picture. `.jpg`, `.png` or `.gif` work too. |
 | About page | `assets/media/about/workspace.webp` | The portrait is filled: `portrait.webm`/`.mp4` + `portrait-poster.jpg`, a 4:5 smile timelapse (544×680, silent loop). |
 
 Videos can be `.mp4` or `.webm`; keep them small (H.264, about 720 px wide, no audio for loops). For example:
 `ffmpeg -i in.mov -vf scale=720:-2 -c:v libx264 -crf 26 -an -movflags +faststart closeup-1.mp4`
 
-“How it came together” for Now Departing, Cookbo and PointerPals uses your write-ups from jonathanbobrow.com. Evening Reader, Audio Bubble and NYC Parking have prompts to replace.
+“How it came together” is a draft on every app page, written from your notes around the process images. Two bracketed prompts remain (Cookbo’s “Working with AI”, Audio Bubble’s “Three tries”).
 When a draft is ready, remove `draft` from its `<section>` and the “Draft” tag from its heading.
 
 ## The page transition
@@ -104,7 +104,7 @@ In `assets/css/site.css`, under “App themes”: `--bg` (room color), `--fg` (t
 ## To do
 
 - Evening Reader: add the App Store link once it’s live (see the TODO in `evening-reader/index.html`).
-- Write “How it came together” for Evening Reader, Audio Bubble and NYC Parking, and the About page’s “How I make these apps”.
+- Edit the six “How it came together” drafts, then remove `draft` and the Draft tag from each; write the About page’s “How I make these apps”.
 - Drop in demo videos, close-ups, process images and the workspace photo (see the table above).
 - Set `LAUNCHED = true` in `assets/js/head.js`.
 
