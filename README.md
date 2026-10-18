@@ -46,7 +46,7 @@ Placeholders fill themselves in. Each one looks for a file by name and shows it 
 Videos can be `.mp4` or `.webm`; keep them small (H.264, about 720 px wide, no audio for loops). For example:
 `ffmpeg -i in.mov -vf scale=720:-2 -c:v libx264 -crf 26 -an -movflags +faststart closeup-1.mp4`
 
-“How it came together” is a draft on every app page, written from your notes around the process images. Two bracketed prompts remain (Cookbo’s “Working with AI”, Audio Bubble’s “Three tries”).
+“How it came together” is a draft on every app page, written from your notes around the process images. One bracketed prompt remains, in Cookbo’s “Working with AI”.
 When a draft is ready, remove `draft` from its `<section>` and the “Draft” tag from its heading.
 
 ## The page transition
