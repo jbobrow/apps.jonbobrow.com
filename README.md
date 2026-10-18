@@ -103,7 +103,6 @@ In `assets/css/site.css`, under “App themes”: `--bg` (room color), `--fg` (t
 
 ## To do
 
-- Evening Reader: add the App Store link once it’s live (see the TODO in `evening-reader/index.html`).
 - Edit the six “How it came together” drafts, then remove `draft` and the Draft tag from each; write the About page’s “How I make these apps”.
 - Drop in demo videos, close-ups, process images and the workspace photo (see the table above).
 - Set `LAUNCHED = true` in `assets/js/head.js`.
