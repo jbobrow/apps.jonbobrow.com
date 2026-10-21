@@ -73,6 +73,7 @@ document.querySelectorAll('.slot[data-src]').forEach((slot) => {
     if (isVideo) {
       el.muted = true; el.loop = true; el.autoplay = true; el.playsInline = true; el.preload = 'auto';
       el.setAttribute('muted', ''); el.setAttribute('playsinline', '');
+      if (slot.dataset.alt) { el.setAttribute('role', 'img'); el.setAttribute('aria-label', slot.dataset.alt); }
       el.addEventListener('loadedmetadata', shown, { once: true });
     } else {
       el.alt = slot.dataset.alt || '';
